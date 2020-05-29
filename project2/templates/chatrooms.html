@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}Chatrooms{% endblock %}
+{% block style %}
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Open+Sans&display=swap" rel="stylesheet">
+    <link href="/static/chatrooms/chatrooms.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+        integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+{% endblock %}
+
+{% block nav %}
+<nav class="navbar navbar-light bg-light">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <button class="mx-5 btn nav-btn" onclick="logoutUser()">Logout</button>
+</nav>
+{% endblock %}
+
+{% block body %}
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="links">
+            <script id="resultLinks" type="text/template">
+                {% raw -%}
+                    {{#each channels}}
+                        <a href="javascript:void(0)" class="chan" onclick="selectRoom(({{json name}}))">{{name}}</a>
+                    {{/each}}
+                {%- endraw %}
+            </script>
+        </div>
+        <a href="javascript:void(0)" class="addbtn" onclick="showForm()">&plus; Add a channel</a>
+    </div>
+
+    <div id="main">
+        <div id="messages">
+        </div>
+        <div class="input-group chatbox">
+            <div class="input-group-addon">
+                <label for="file"><i class="fas fa-paperclip fa-2x"></i></label>
+                <input type="file" class="attach-btn">
+            </div>
+            <input type="text" class="form-control border-1" placeholder="Input message..." id="chat-textbox" disabled="true">
+            <span class="input-group-addon">
+                <button class="btn border-0 bg-white text-primary hover-color-darkblue" id="chat-btn" type="submit" disabled="true">
+                    <i class="fab fa-telegram-plane fa-2x"></i>
+                </button>
+            </span>
+        </div>
+        <div class="form">
+            <a href="javascript:void(0)" class="closeform" onclick="hideForm()">&times;</a>
+            <p>Please provide a channel name</p>
+            <input placeholder="Enter channel name" type="text" id="txt-form" name="displayname">
+            <p class="channelexist"></p>
+            <button onclick="submitForm()" disabled="true" class="btn-form">Create Channel</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+        integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="/static/chatrooms/chatrooms.js"></script>
+{% endblock %}

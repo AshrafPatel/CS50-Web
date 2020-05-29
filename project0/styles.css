@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; }
+
+body {
+  max-height: 700px;
+  background: linear-gradient(to bottom, #D8EAFF, white); }
+
+header {
+  font-size: 25px; }
+
+.Intro {
+  display: block;
+  padding: 0;
+  margin: 0; }
+
+.AP {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-top: 300px; }
+
+.weblinkcontainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  max-width: 100%;
+  height: 80px;
+  justify-content: space-evenly;
+  padding: 10px 50px;
+  flex-wrap: wrap; }
+  .weblinkcontainer a button {
+    flex: 1;
+    width: 225px;
+    background-color: black;
+    color: white;
+    font-family: Playfair Display;
+    height: 45px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px white;
+    font-size: 25px;
+    font-weight: 550; }
+  .weblinkcontainer a button:hover {
+    background-color: white;
+    color: black; }
+
+/*# sourceMappingURL=styles.css.map */

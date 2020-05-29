@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Questions|Concerns|Suggestions</title>
+        <link rel="stylesheet" type="text/css" href="contactform.css"/> <!--To import css file-->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> <!--to import lobster font-->
+        <script src="contactform.js"></script> <!--To import javascript file-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header id="Contact Us">
+          <!--The nav code-->
+            <a href="../Home.html"><img src="../img/white escapism - Copy.png" class="Logo"></a>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#"><img src="images/iceland.jpg" width="205" height="200"/>Iceland</a></li>
+                    <li><a href="#"><img src="images/norway.jpg" width="205" height="200"/>Norway</a></li>
+                    <li><a href="../Peru.html"><img src="images/piru.jpg" width="205" height="200"/>Peru</a></li>
+                    <li><a href="../Greece.html"><img src="images/greece.jpg" width="205" height="200"/>Greece</a></li>
+                    <li><a href="#"><img src="images/australia.jpg" width="205" height="200"/>Australia</a></li>
+                    <li><a href="#"><img src="images/south africa.jpg" width="205" height="200"/>South Africa</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+          <!--The contact form code-->
+            <form method="get" action="index.html" onsubmit="return validateForm()" style="background-color: white;">
+                <fieldset>
+                    <div class="container-fluid col-lg-12 col-md-6 col-sm-6">
+                    <h1>Contact Form</h1>
+                    <p id="forAny">For any questions/assistance please fill out the form below</p>
+                    <div class="contform">
+                        <div class="nami">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" placeholder="First Name"/>
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname" placeholder="Last Name"/>
+                        </div>
+                        <br>
+                        <div class="numbs">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Email"/>
+                            <br>
+                            <br>
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" placeholder="Phone Number with dashes"/>
+                            <input type="checkbox" name="subscribe" value="subscription" id="checker">subscribe to escapism newletters
+                            <br>
+                            <br>
+                            <label for="mobile">Mobile Number</label>
+                            <input type="text" id="mobile" placeholder="Mobile Number with dashes"/>
+                            <label for="radFemale">Female</label>
+                            <input type="radio" id="radFemale" value="female" name="radGender">
+                            <label for="radMale">Male</label>
+                            <input type="radio" id="radMale" value="male" name="radGender">
+                        </div>
+                    </div>
+
+                    <p>Please enter your question below.</p>
+                        <textarea id ="question" placeholder="Please type here" class="col-lg-12  col-sm-12"></textarea>
+                    <br>
+                    <button type="submit">Validate</button>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+
+
+        <footer>
+            <img src="../img/white escapism - Copy.png" class="Logo">
+            <div class="links">
+                <a href="Contact Form.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                Copyright 2017<sup>&copy;</sup>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">About Us</a>
+            </div>
+        </footer>
+
+            </body>
+        </html>

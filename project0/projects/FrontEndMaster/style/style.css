@@ -1,0 +1,209 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+h2 {
+    color: hsl(192, 100%, 9%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(192, 100%, 9%);
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.buttonGetStarted {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 100px;
+    border: 1px solid #ff6bfa;
+    border-radius: 100px;
+    background: #ff6bfa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff6bfa), to(#ff6bfa));
+    background: -moz-linear-gradient(top, #ff6bfa, #ff6bfa);
+    background: linear-gradient(to bottom, #ff6bfa, #ff6bfa);
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+
+/*INTRO CONTAINER*/
+.introHuddleContainer {
+    background-image: url("./../images/bg-hero-desktop.svg");
+    height: 1300px;
+    margin-bottom: 200px;
+    background-color: hsl(193, 100%, 96%);
+    width: 100%;
+    align-self: center;
+}
+
+.buttonLogo {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.callToActionImgText {
+    padding: 0 100px 100px;
+    display: flex;
+    flex-direction: row;
+} 
+
+.callToActionImage {
+    min-width: 1200px;
+}
+
+.callToActionText {
+    padding: 250px 50px;
+}
+
+.callToActionText p{
+    font-size: 20px;
+}
+
+.tryItButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 54px;
+    border: 0px solid #ffffff;
+    border-radius: 100px;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#fffffe));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    font: normal normal bold 20px arial;
+    color: #111111;
+    text-decoration: none;
+}
+
+
+.callToActionText p {
+    font-weight: 400;
+    color: hsl(192, 100%, 9%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*GROW TOGETHER CONTAINER*/
+.growTogetherContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 15px;
+    -webkit-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    -moz-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    box-shadow: 3px 6px 44px -9px rgba(240,240,240,0.97);
+    max-width: 1440px;
+    align-self: center;
+}
+
+.growTogetherImg {
+    height: 400px;
+}
+
+.growTogetherText {
+    padding: 100px 250px;
+}
+
+.growTogetherText p {
+    color:  hsl(208, 11%, 55%);
+    font-size: 18px;
+}
+
+
+/*FLOWING CONVERSATION CONTAINER*/
+.flowingConvoContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px 15px;
+    -webkit-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    -moz-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    box-shadow: 3px 6px 44px -9px rgba(240,240,240,0.97);
+    max-width: 1440px;
+    margin-bottom: 100px;
+    align-self: center;
+}
+
+.flowingConvoImg {
+    height: 400px;
+}
+
+.flowingConvoText {
+    padding: 100px 250px;
+}
+
+.flowingConvoText p {
+    color:  hsl(208, 11%, 55%);
+    font-size: 18px;
+}
+
+
+/*YOUR USERS CONTAINER*/
+.yourUsersContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 15px;
+    -webkit-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    -moz-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    box-shadow: 3px 6px 44px -9px rgba(240,240,240,0.97);
+    max-width: 1440px;
+    margin-bottom: 100px;
+    align-self: center;
+}
+
+.yourUserImg {
+    height: 400px;
+}
+
+.yourUserText {
+    padding: 100px 250px;
+}
+
+.yourUserText p {
+    color:  hsl(208, 11%, 55%);
+    font-size: 18px;
+}
+
+
+/*BUILDING CONTAINER*/
+.buildContainer {
+    padding: 140px 240px;
+    -webkit-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    -moz-box-shadow: 10px 10px 44px -9px rgba(240,240,240,0.97);
+    box-shadow: 3px 6px 44px -9px rgba(240,240,240,0.97);
+    max-width: 1440px;
+    display: block;
+    margin: auto;
+    z-index: 999;
+}
+.buildContainer button {
+    margin: 0px 50px;
+}
+
+/*CLOSING CONTAINER*/
+.closingContainer {
+    background-color: hsl(192, 100%, 9%);
+    padding: 50px 0;
+}
+
+/*FOOTER*/
+footer {
+    background-color: hsl(192, 100%, 9%);
+    padding: 50px 0;
+}
+
+.attribution {
+    color: white;
+    font-size: 20px;
+}

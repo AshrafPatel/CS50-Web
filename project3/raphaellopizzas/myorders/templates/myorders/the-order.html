@@ -1,0 +1,118 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Raphaello's Pizza|Order {% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'theorder/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div id="cart-background">
+    <div class="title">
+        <h1>Order #{{order.id}}</h1>
+        <p>Delivered to {{order.address}}</p>
+        <h1>{{order.date_time}}</h1>
+    </div>
+
+    {% if pizzas %}
+    <h2>Pizza</h2>
+    <hr />
+    {% for x in pizzas %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.size}}
+            {{x.pizza_class}}
+            {{x.pizza_type}}
+            {% if x.pizza_toppings.all.count > 1 %}
+            includes:
+            {% for t in x.pizza_toppings.all %}
+            {% if forloop.counter0|add:"1" < x.pizza_toppings.all.count %}
+            {{t}},
+            {% else %}
+            and {{t}}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if subs %}
+    <h2>Subs</h2>
+    <hr />
+    {% for x in subs %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.size}}
+            {{x.sub_type}}
+            {% if x.sub_toppings.all.count > 1 %}
+            includes
+            includes:
+            {% for t in x.pizza_toppings.all %}
+            {% if forloop.counter0|add:"1" < x.pizza_toppings.all.count %}
+            {{t}},
+            {% else %}
+            and {{t}}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% if x.extra_cheese == True %}
+            and Extra Cheese
+            {% endif %}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if pastas %}
+    <h2>Pastas</h2>
+    <hr />
+    {% for x in pastas %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.pasta_type}}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if salads %}
+    <h2>Salads</h2>
+    <hr />
+    {% for x in salads %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.salad_type}}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if platters %}
+    <h2>Platters</h2>
+    <hr />
+    {% for x in platters %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.size}}
+            {{x.platter_type}}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% if pizzas or subs or pastas or salads or platters %}
+    <hr class="hr-total" />
+    <h2>${{price}}</h2>
+    {% endif %}
+</div>
+{% endblock %}

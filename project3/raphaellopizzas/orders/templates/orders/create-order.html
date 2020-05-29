@@ -1,0 +1,25 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Raphaello's Pizza|Order{% endblock %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'create-order/style.css' %}">
+{% endblock %}
+
+{% block body %}
+    <input type="hidden" id="url-create-form" value="{% url 'create_form' %}" />
+    <input type="hidden" id="url-create-order" value="{% url 'create_order' %}"/>
+    {{choice_form}}
+    <div class="order-container">
+        <form method="POST" action="{% url 'create_order' %}">
+            {% csrf_token %}
+            <div id="form-make-order">
+                <input name="menu-option" type="hidden" value="pizza">
+                <h2>Pizza</h2>
+                {{form}}
+                <button id='btn-submit'>Add to Cart</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'create-order/script.js' %}"></script>
+{% endblock %}

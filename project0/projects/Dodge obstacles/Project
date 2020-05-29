@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="1000"></canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    var megaman = new Image();
+    megaman.src = "../Additional stuff/Images/MegaAnim.png"
+
+    
+    megaman.onload = function() {
+       context.drawImage(
+            megaman, 0, 0, 768, 96,          //Where to cut you image first 2 next 2 image length x and y
+                     0, 0, 768, 96          //Next 2 where its displayed on canvas last 2 how much space is reserved
+
+            //megaman, 0,0
+        )     
+    }
+</script>
+</body>
+</html>

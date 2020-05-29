@@ -1,0 +1,79 @@
+html,
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#F84522, #FB6730) !important;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+#btn-submit {
+    display: block;
+    align-self: center;
+    background-color: #ee5a00;
+    box-shadow: 4px 4px 4px black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    color: white;
+    font-weight: 900;
+    font-family: 'Montserrat',
+        sans-serif;
+    letter-spacing: 1px;
+    transition: all 1s;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+#btn-submit:hover {
+    background: #be4a02;
+}
+
+#cart-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: 50px auto;
+    background-color: #edf2f5;
+    padding: 20px 70px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Spicy Rice', cursive;
+}
+
+hr {
+    margin-top: 0;
+    background: black;
+    border: 1px ridge black;
+    width: 30%;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hr-total {
+    margin-top: 100px;
+    width: 80%;
+}

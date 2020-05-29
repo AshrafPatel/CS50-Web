@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Background Generator</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Background Generator</h1>
+        <div id="colorContainer">
+            <input type="color" name="color" value="" oninput="getBackground()">
+            <input type="color" name="color" value="" oninput="getBackground()">
+        </div>
+        <h2>Current CSS Background</h2>
+        <p id="cssCode"></p>
+        <script src="javascript/myScript.js" async defer></script>
+        <button class="button" id="addMore" onclick="addMoreColors()">Add more colors!</button>
+    </body>
+</html>

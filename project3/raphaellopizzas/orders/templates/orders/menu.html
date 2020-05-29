@@ -1,0 +1,95 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Raphaello's Pizza|Menu{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'menu/style.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="menu-nav">
+        <a href="#" id="pizza-link">Pizza</a>&emsp;|&emsp;
+        <a href="#" id="sub-link">Subs</a>&emsp;|&emsp;
+        <a href="#" id="pasta-link">Pasta</a>&emsp;|&emsp;
+        <a href="#" id="salad-link">Salad</a>&emsp;|&emsp;
+        <a href="#" id="platter-link">Platter</a>
+    </div>
+
+    <div class="menu-container">
+        <h2>Pizza</h2>
+        <h3>Regular</h3>
+        <hr/>
+        <table>
+            <tr>
+                <th></th>
+                <th>Small</th>
+                <th>Large</th>
+            </tr>
+            <tr>
+                <td class="menu-item">Cheese</td>
+                <td>$12.70</td>
+                <td>$17.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">Special</td>
+                <td>$17.75</td>
+                <td>$25.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">Topping</td>
+                <td>$13.70</td>
+                <td>$19.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">2 Toppings</td>
+                <td>$15.20</td>
+                <td>$21.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">3 Toppings</td>
+                <td>$16.20</td>
+                <td>$23.95</td>
+            </tr>
+        </table>
+
+        <h3>Sicilian</h3>
+        <hr/>
+        <table>
+            <tr>
+                <th></th>
+                <th>Small</th>
+                <th>Large</th>
+            </tr>
+            <tr>
+                <td class="menu-item">Cheese</td>
+                <td>$12.70</td>
+                <td>$17.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">Special</td>
+                <td>$17.75</td>
+                <td>$25.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">Topping</td>
+                <td>$13.70</td>
+                <td>$19.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">2 Toppings</td>
+                <td>$15.20</td>
+                <td>$21.95</td>
+            </tr>
+            <tr>
+                <td class="menu-item">3 Toppings</td>
+                <td>$16.20</td>
+                <td>$23.95</td>
+            </tr>
+        </table>
+        <p class="note">
+            Toppings include: Pepperoni, Sausage, Mushrooms, Onions, Ham, Canadian Bacon, Pineapple, Eggplant, Tomato &
+            Basil, Green Peppers, Hamburger, Spinach, Artichoke, Buffalo Chicken, Barbecue Chicken, Anchovies, Black
+            Olives, Fresh Garlic and Zucchini.
+        </p>
+        <script src="{% static 'menu/script.js' %}"></script>
+    </div>
+{% endblock %}

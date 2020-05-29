@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block title %}{{book.title}}{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css"href="/static/css/book.css"/>
+<link href="https://fonts.googleapis.com/css?family=Baskervville|Open+Sans&display=swap" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<h1>{{book.title}}</h1>
+<table>
+    <tr>
+        <th>Title</th>
+        <td>{{book.title}}</td>
+    </tr>
+    <tr>
+        <th>Author</th>
+        <td>{{book.author}}</td>
+    </tr>
+    <tr>
+        <th>ISBN</th>
+        <td>{{book.isbn}}</td>
+    </tr>
+    <tr>
+        <th>Publication Year</th>
+        <td>{{book.year}}</td>
+    </tr>
+    <tr>
+        <th>Reviews</th>
+        <td>{{book.work_ratings_count}}</td>
+    </tr>
+    <tr>
+        <th>Average Rating</th>
+        <td>{{book.average_rating}}</td>
+    </tr>
+</table>
+{% if no_reviews %}
+    <h2>No reviews found</h2>
+    <p class="befirst">Be the first</p>
+{% else %}
+    <h3>Add a review</h3>
+{% endif %}
+<form name="review" onsubmit="return submitReview()" method="POST">
+    <div class="stars">
+        <input class="star star-5" id="star-5" type="radio" name="star" value='5' />
+        <label class="star star-5" for="star-5"></label>
+        <input class="star star-4" id="star-4" type="radio" name="star" value='4' />
+        <label class="star star-4" for="star-4"></label>
+        <input class="star star-3" id="star-3" type="radio" name="star" value='3' />
+        <label class="star star-3" for="star-3"></label>
+        <input class="star star-2" id="star-2" type="radio" name="star" value='2' />
+        <label class="star star-2" for="star-2"></label>
+        <input class="star star-1" id="star-1" type="radio" name="star" value='1' />
+        <label class="star star-1" for="star-1"></label>
+    </div>
+    <br>
+    <textarea name="reviewtext" aria-required="true"></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% if not no_reviews %}
+<div class="d-flex flex-wrap justify-content-center">
+{% for review in reviews %}
+<div class="card m-4">
+    <div class="card-body rounded">
+        {% for i in range(1, 6) %}
+            {% if i <= review.rating %}
+                <ion-icon name="star"></ion-icon>
+            {% else %}
+                <ion-icon name="star-outline"></ion-icon>
+            {% endif %}
+        {% endfor %}
+        <div class="user">
+            <img src="/static/img/defaultuser.svg">
+            <h5>{{review.username}}</h5>
+        </div>
+        <br>
+        <p class="font-italic">Last updated on: {{review.date}}</p>
+        <p>{{review.text}}</p>
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+{% endblock %}

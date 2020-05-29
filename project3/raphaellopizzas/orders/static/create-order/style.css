@@ -1,0 +1,141 @@
+html,
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#F84522, #FB6730) !important;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.errorlist > li {
+    display: none;
+}
+
+label[for="id_choice"] {
+    display: none;
+}
+
+#id_choice {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+}
+
+#btn-submit {
+    display: block;
+    align-self: center;
+    background-color: #ee5a00;
+    box-shadow: 6px 6px 6px black;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 35px;
+    color: white;
+    font-weight: 900;
+    font-family: 'Montserrat',
+    sans-serif;
+    letter-spacing: 1px;
+    transition: all 1s;
+    text-transform: uppercase;
+    width: 30%;
+    margin-top: 15px;
+}
+
+#btn-submit:hover {
+    background: #be4a02;
+}
+
+#form-make-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 50px auto;
+    background-color: #edf2f5;
+    padding: 20px 70px;
+    border-radius: 10px;
+}
+
+#form-make-order > label {
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 1.25rem;
+    font-weight: 900;
+    height: 35px;
+}
+
+ul.errorlist {
+    display: none;
+}
+
+#form-make-order > select {
+    height: 50px;
+    margin: 15px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(255, 94, 0);
+    text-shadow: 1px 1px 1px black;
+    font-family: Impact,
+        Haettenschweiler,
+        "Franklin Gothic Bold",
+        Charcoal,
+        "Helvetica Inserat",
+        "Bitstream Vera Sans Bold",
+        "Arial Black",
+        "sans serif";
+    font-size: 4.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+label[for="id_extra_cheese"] {
+    display: inline-block !important;
+}
+
+input[type="checkbox"] {
+    transform: scale(2.5);
+    margin: 0 auto 10px !important;
+    height: 35px !important;
+}
+
+select#id_pizza_toppings {
+    height: 200px;
+}
+
+select#id_sub_toppings {
+    height: 90px;
+}
+
+
+select option {
+    padding: 5px;
+    text-align: center;
+}
+
+
+select::-ms-expand {
+    display: none;
+    /* remove default arrow in IE 10 and 11 */
+}
+
+select {
+    transition: all 2s;
+}
+
+input#id_quantity {
+    width: 60px;
+    font-size: 1.5rem;
+    margin: auto auto;
+}
+
+select[disabled] {
+    background: #b9b9b9;
+    cursor: not-allowed;
+}

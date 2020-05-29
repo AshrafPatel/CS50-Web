@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ headline }}{% endblock %}
+{% block style %}
+<style>
+    h1 {
+        font-size: 5rem;
+    }
+    p {
+        color: grey;
+    }
+</style>
+{% endblock %}
+{% block body %}
+    <h1>{{ headline }}</h1>
+    <p>{{ message }}</p>
+{% endblock %}

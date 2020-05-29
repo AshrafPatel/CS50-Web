@@ -1,0 +1,7 @@
+Flask
+Flask-Session
+flask_socketio
+eventlet
+gunicorn
+gevent
+newrelic

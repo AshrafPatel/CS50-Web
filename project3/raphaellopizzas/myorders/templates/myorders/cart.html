@@ -1,0 +1,180 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Raphaello's Pizza|Checkout{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'cart/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div id="cart-background">
+    {% if pizzas %}
+    <h2>Pizza</h2>
+    <hr />
+    {% for x in pizzas %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.size}}
+            {{x.pizza_class}}
+            {{x.pizza_type}}
+            {% if x.pizza_toppings.all.count > 1 %}
+            includes:
+            {% for t in x.pizza_toppings.all %}
+            {% if forloop.counter0|add:"1" < x.pizza_toppings.all.count %}
+            {{t}},
+            {% else %}
+            and {{t}}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if subs %}
+    <h2>Subs</h2>
+    <hr />
+    {% for x in subs %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.size}}
+            {{x.sub_type}}
+            {% if x.sub_toppings.all.count > 1 %}
+            includes
+            includes:
+            {% for t in x.pizza_toppings.all %}
+            {% if forloop.counter0|add:"1" < x.pizza_toppings.all.count %}
+            {{t}},
+            {% else %}
+            and {{t}}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% if x.extra_cheese == True %}
+            and Extra Cheese
+            {% endif %}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if pastas %}
+    <h2>Pastas</h2>
+    <hr />
+    {% for x in pastas %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.pasta_type}}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if salads %}
+    <h2>Salads</h2>
+    <hr />
+    {% for x in salads %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.salad_type}}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if platters %}
+    <h2>Platters</h2>
+    <hr />
+    {% for x in platters %}
+    <div class="order-item">
+        <p>
+            {{x.quantity}}
+            {{x.size}}
+            {{x.platter_type}}
+        </p>
+        <p>{{x.price}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% if pizzas or subs or pastas or salads or platters %}
+    <hr class="hr-total" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <form id="order-item" onsubmit="return validateForm()" method="POST" action="{% url 'checkout' %}">
+        {% csrf_token %}
+        <input type="hidden" value="{{price}}" name="price"/>
+        <p>Total: <b id="price" style="font-size: 1.5em;">{{price}}</b></p>
+        <div id="card-element">
+
+        </div>
+        <div id="card-errors" role="alert">
+
+        </div>
+        <script>
+            function validateForm() {
+                addy = document.querySelector("#id_address").value
+                if (addy == null || addy == undefined || addy == "") {
+                    alert("Please enter a valid address");
+                    return false;
+                }
+                return true;
+            }
+            var stripe = Stripe('pk_test_dfmqg8s2GAGhHqfgsweDg26F00FN9GwfjQ');
+            var elements = stripe.elements();
+            var style = {
+                base: {
+                    fontSize: '16px',
+                    color: '#32325d',
+                },
+            };
+
+            var card = elements.create('card', {
+                style: style,
+                hidePostalCode: true
+            });
+            card.mount('#card-element');
+
+            var form = document.getElementById('order-item');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                stripe.createToken(card).then(function (result) {
+                    if (result.error) {
+                        // Inform the customer that there was an error.
+                        var errorElement = document.getElementById('card-errors');
+                        errorElement.textContent = result.error.message;
+                    } else {
+                        // Send the token to your server.
+                        stripeTokenHandler(result.token);
+                    }
+                });
+            });
+
+            function stripeTokenHandler(token) {
+                // Insert the token ID into the form so it gets submitted to the server
+                var form = document.getElementById('order-item');
+                var hiddenInput = document.createElement('input');
+                hiddenInput.setAttribute('type', 'hidden');
+                hiddenInput.setAttribute('name', 'stripeToken');
+                hiddenInput.setAttribute('value', token.id);
+                form.appendChild(hiddenInput);
+
+                // Submit the form
+                form.submit();
+            }
+        </script>
+        <input type="text" id="id_address" name="address" placeholder="address...">
+        <input type="submit" id="btn-submit" />
+        {% else %}
+            <h2>Nothing To Order</h2>
+            <button id="btn-submit" onclick="window.location.href='{% url 'create_order' %}';">Order Now</button>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

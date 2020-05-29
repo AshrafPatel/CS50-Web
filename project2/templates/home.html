@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}Shack Chat App{% endblock %}
+{% block style %}
+    <link href="/static/home/home.css" rel="stylesheet">
+{% endblock %}
+
+{% block nav %}
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="{{url_for('index')}}">
+        <img src="/static/home/shack logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Shack
+    </a>
+    <button class="mx-5 btn nav-btn" type="submit">Enter Chat</button>
+</nav>
+{% endblock %}
+
+{% block body %}
+    <div class="welcome">
+        <h2>Where chat happens</h2>
+        <div class="header">
+            <img class="img img-responsive welcome-img" src="/static/home/shack logo.jpg">
+            <h1>Shack</h1>
+        </div>
+    </div>
+    <div class="try">
+        <h3>Choose a better way to chat</h3>
+        <button class="btn btn-try">try shack</button>
+    </div>
+
+    <form>
+        <a href="javascript:void(0)" class="closeform" onclick="hideForm()">&times;</a>
+        <p>Please provide a name</p>
+        <input placeholder="5 characters or longer" type="text" id="txt-form" name="displayname">
+        <p class="usernameexist"></p>
+        <button onclick="submitForm()" disabled="true" class="btn-form">Enter chat</button>
+    </form>
+    <script src="/static/home/home.js"> </script>
+{% endblock %}

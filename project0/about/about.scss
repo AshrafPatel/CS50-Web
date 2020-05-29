@@ -1,0 +1,87 @@
+$width:80%;
+$font-normal:1.5rem;
+$font-ol:1.2rem;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#00ABED, #005ADA);
+}
+
+header {
+    font-size: 25px;
+}
+
+h1 {
+    font-size: 5rem;
+    color: white;
+    padding-top: 120px;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+}
+
+.AboutContainer {
+    display: block;
+    margin: 0 auto;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    width: $width;
+    box-shadow: 6px 6px 6px 6px black;
+    background: #9BB6EE;
+
+    p {
+        font-size:  $font-normal;
+        padding: 10px 20px;
+        margin: 0 auto;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    ol {
+        @extend p;
+        margin: 0 0 0 50px;
+        font-weight: bolder;
+        color: black;
+        font-size: $font-ol;
+    }
+
+    .name {
+        font-size: larger;
+        text-transform: uppercase;
+        font-family: 'Righteous',
+        cursive;
+    }
+
+    .identify {
+        text-transform: uppercase;
+        color: #005ADA;
+        font-style: italic;
+        font-weight: boldest;
+        font-family: 'Righteous', cursive;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .disappear {
+        display: none;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+    .disappear {
+        display: block;
+    }
+}
+

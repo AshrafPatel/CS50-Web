@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="/static/css/signregister.css">
+{% endblock %}
+{% block body %}
+<img class="mb-4"
+    src="/static/img/book.png"
+    alt="" width="200"
+    height="200">
+<h1 class="display-1">{{message}}</h1>
+<div class="form-body">
+    <form class="form-signin" action="#" method="post" onsubmit="return signIn()">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required=""
+            autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password"
+            required="">
+        <button class="btn btn-lg btn-block" type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}

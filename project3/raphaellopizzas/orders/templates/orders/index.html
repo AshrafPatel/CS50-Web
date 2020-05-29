@@ -1,0 +1,68 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Raphaello's Pizza{% endblock %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index/style.css' %}">
+{% endblock %}
+
+{% block body %}
+{% if request.user.is_authenticated %}
+    <h1>Hi {{user.username}}, Welcome Back</h1>
+{% else %}
+    <h1>Hi, what can I help you order?</h1>
+{% endif %}
+    <h2>Featured Delicacies</h2>
+    <div class="index-container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="offer-container">
+                        <img src="{% static '/img/pizza.jpg'%}" height=511 width=50% alt="...">
+                        <div class="offer-info">
+                            <h4><span class="emphasis">Raphaello Pizza</span> Special</h4>
+                            <h5>Only available for a limited time!</h5>
+                            <h3><span class="emphasis">$25.95</span></h3>
+                            <button onclick="window.location.href='{% url 'create_order' %}';">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="offer-container">
+                        <img src="{% static '/img/pasta.jpg'%}" height=511 width=50% alt="...">
+                        <div class="offer-info">
+                            <h4><span class="emphasis">Fan Favourite </span>Pasta</h4>
+                            <h5>Baked Ziti with Chicken</h5>
+                            <h3><span class="emphasis">$9.75</span></h3>
+                            <button onclick="window.location.href='{% url 'create_order' %}';">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="offer-container">
+                        <img src="{% static '/img/burger.jpg'%}" height=511 width=50% alt="...">
+                        <div class="offer-info">
+                            <h4><span class="emphasis">Bon Appetite! </span> Burger</h4>
+                            <h5>Classic Cheese Burger Special</h5>
+                            <h3><span class="emphasis">$7.45</span></h3>
+                            <button onclick="window.location.href='{% url 'create_order' %}';">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+<script src="{% static 'index/script.js' %}"></script>
+{% endblock %}

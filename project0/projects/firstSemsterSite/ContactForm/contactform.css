@@ -1,0 +1,129 @@
+header {
+    width: 100%;
+    background-color: white;
+}
+
+.navigation ul {
+    float: none; /*to make the buttons float*/
+}
+
+.navigation ul li{
+    display: inline-block; /*Display as next to each otheer*/
+    background: black; /*Blocks will be black*/
+    width: 205px;
+    text-align: center; /*Links will appear in the middle*/
+    text-decoration:  none;/*This code was necessary to prevent hyperlinks from showing underlined*/
+    font-family: Lobster; /*Lobster font used to make it look stylish*/
+    font-size: 25px;
+}
+
+.navigation a {
+    color: white; /*links will appear in white*/
+}
+
+.navigation a img { display:none; }/*This code was necessary to stop image from showing all the time*/
+.navigation a:hover img {/*calling image objects on hover*/
+    display: block;/*image is displayed as block*/
+    position: fixed;/*Fixed was necessary so block is not pushed down when hovered over*/'
+    top: 0px;/*How high to position object on hover*/
+}
+
+/*Logo Position*/
+.Logo {
+    display: block;/*logo will be displayed as a block*/
+    margin-left: auto;;/*logo will be in center*/
+    margin-right: auto;;/*logo will be in center*/
+}
+
+
+footer {
+    clear: both;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+body {
+    margin: 0px;
+    line-height: 1.5;
+    background-image: url('../img/back1.jpg')
+}
+
+#forAny {/*The text after Contact form main heading*/
+    font-size: 22px;
+    text-align: center;
+}
+
+form {/*To stop it from going off screen*/
+    max-width: 60%;
+}
+
+.contform p {/*the text for what to fill in what field*/
+    text-align: left;
+    color: black;
+    font-family: arial, helvetica;
+    font-size: 13px;
+}
+
+h1 {/*Contact Form text*/
+    color: black;
+    font-family: Lobster;
+    text-align: center;
+}
+
+title {
+    color: white;
+}
+
+/*most of the code from here on is just positioning the buttons and text area etc.*/
+form {
+    margin: 3% auto 3% auto;
+    padding: 2%;
+}
+
+
+button {
+    margin-left: 45%;
+    margin-right: 55%;
+}
+
+
+input {
+    height: 15px;
+    line-height: 15px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 40%;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.nami {
+    margin-left: 10%
+}
+
+.numbs {
+    margin-left: 10%;
+}
+
+input#firstname {
+    margin-left: 4%;
+}
+
+input#email {
+    margin-left: 8%;
+}
+
+input#mobile {
+    margin-right: 7.5%;
+}
+
+#checker {
+    margin-left: 5%;
+}
+
+input#radFemale {
+    margin-right: 13%;
+}

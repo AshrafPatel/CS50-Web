@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>AshrafPatel|Contact</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <header id="AshrafPatel" class="">
+            <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">Ashraf Patel</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar1">
+                        <ul class="navbar-nav nav nav-fill w-100">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../projects/projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../about/about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <h1 id="getInTouch">Contact Me</h1>
+
+        <div class="ContactMe" id="4thSect">
+            <form method="POST" onsubmit="return validateForm()">
+                <fieldset>
+                    <ul class="formSmallBoxes">
+                        <li>
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" name="fName" />
+                        </li>
+
+                        <li>
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname" name="lName" />
+                        </li>
+
+                        <li>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="eMail" />
+                        </li>
+
+                        <li>
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" placeholder="647-564-1235" name="number" />
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Please enter your message</p>
+                    <textarea name="question" id="question" placeholder="Enter your message here" name="message"></textarea>
+                    <button type="submit" name="submit" class="btn">Validate</button>
+                </fieldset>
+            </form>
+        </div>
+        <script src="./contact.js"></script>
+    </body>
+</html>

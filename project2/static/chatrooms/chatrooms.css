@@ -1,0 +1,287 @@
+.sidebar {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #3F0E40;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidebar */
+}
+
+html {
+    overflow-y: hidden;
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.closeform {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: #818181;
+    cursor: pointer;
+}
+
+.closeform:hover {
+    text-decoration: none;
+    color: white;
+}
+
+a.addbtn {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #3F0E40;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #3F0E40;
+    ;
+}
+
+.form {
+    z-index: 10;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 470px;
+    height: 220px;
+    color: white;
+    display: none;
+    text-align: center;
+    background: #3F0E40;
+    box-shadow: 6px 6px 6px black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+}
+
+.form>p {
+    color: white;
+}
+
+.form>input {
+    font-family: 'Open Sans', sans-serif;
+    min-width: 100%;
+}
+
+.btn-form {
+    background: #AAA;
+    color: #3F0E40;
+    text-transform: uppercase;
+    min-width: 100%;
+}
+
+p.channelexist {
+    font-size: 1rem;
+    color: red;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    /* If you want a transition effect */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #F8F9FA;
+}
+
+#messages {
+    overflow-y: scroll;
+    height: 85%;
+}
+
+.messageContainer {
+    justify-self: flex-start;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.attach-btn {
+    opacity: 0;
+    width: 52px;
+    height: 46px;
+    position: absolute;
+    left: 1px;
+}
+
+.attach-btn+label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: black;
+    display: block;
+    width: 52px;
+    height: 46px;
+    cursor: pointer;
+}
+
+.fa-paperclip {
+    z-index: 5;
+}
+
+.attach-btn:focus+label,
+.attach-btn+label:hover {
+    color: grey;
+}
+
+.chatbox {
+    padding: 0;
+    margin: 0;
+    justify-self: flex-end;
+    align-self: flex-end;
+    height: 15%;
+}
+
+.messageContainer > .my-msg {
+    align-self: flex-end;
+    font-family: 'Open Sans', sans-serif;
+    background: #19A389;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 1px;
+    margin: 5px 30px;
+    width: 25%;
+}
+
+.messageContainer > .others-msg {
+    align-self: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    background: #42244A;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 1px;
+    margin: 5px 30px;
+    width: 25%;
+}
+
+.my-username {
+    text-decoration: underline;
+    font-weight: bolder;
+    font-family: 'Arimo', sans-serif;
+    display: inline-block;
+    width: 95%;
+}
+
+.other-username {
+    text-decoration: underline;
+    font-weight: bolder;
+    font-family: 'Arimo', sans-serif;
+}
+
+.timestamp {
+    color: #f0f0f0;
+    position: relative;
+    font-size: 10px;
+    text-align: right;
+}
+
+.delete-my-msg {
+    color: #EC1B2E;
+    cursor: pointer;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: right;
+}
+
+.delete-transition {
+    animation-name: delete-transition;
+    animation-duration: 1s;
+}
+
+.system-msg {
+    background: #FE9166;
+    color: #f0f0f0;
+    width: 20%;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 50px;
+    align-self: center;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    margin: 15px auto;
+    padding: 15px;
+}
+
+@keyframes delete-transition {
+    0% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}

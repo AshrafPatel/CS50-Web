@@ -1,0 +1,132 @@
+html, body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: white;
+    height: 100%;
+    overflow-y: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    color: black;
+    background: #edf2f5;
+    border-radius: 9px;
+    padding: 30px 0;
+    width: 80%;
+    margin: 50px auto;
+    font-weight: 400;
+}
+
+h2 {
+    color: #ee5a00;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 1000;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    background: linear-gradient(#F84522, #FB6730) !important;
+}
+
+.index-container {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: #ee5a00;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid #ee5a00;
+    background: #ee5a00;
+}
+
+.carousel-control-next-icon:after {
+    content: '→';
+    font-size: 55px;
+    color: black;
+}
+
+.carousel-control-prev-icon:after {
+    content: '←';
+    font-size: 55px;
+    color: black;
+}
+
+.carousel-indicators > li {
+    background: #ee5a00;
+}
+
+.offer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.offer-info {
+    padding: 45px;
+    background: #edf2f5;
+    height: 511px;
+}
+
+h3 {
+    margin-top: 50px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-size: 5em;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-size: 4.5em;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h5 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.emphasis {
+    color: rgb(255, 94, 0);
+    text-shadow: 1px 1px 1px black;
+}
+
+.offer-info > button {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    background-color: #ee5a00;
+    box-shadow: 6px 6px 6px black;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 35px;
+    color: white;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    transition: all 1s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #be4a02;
+}

@@ -1,0 +1,46 @@
+.dice-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background: linear-gradient(#00541F, #003413);
+  /* width: 70%; */
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+	text-align:center;
+	font-family: 'Russo One', sans-serif;
+	text-shadow: 5px 0 #971A00;
+	font-size: 8rem;
+	color: #469563;
+}
+
+h4 {
+  font-size: 3rem;
+  color: #469563;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 2px 0 #971A00;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  padding-top: 200px;
+}

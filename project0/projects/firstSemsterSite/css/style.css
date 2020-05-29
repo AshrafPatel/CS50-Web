@@ -1,0 +1,142 @@
+
+header {
+    width: 100%;
+    background-color: white;
+}
+/*top header is white and width cover full screen*/
+
+
+.navigation ul {
+    float: none;
+}
+/*ul children will be floating none is used to get in middle*/
+
+.navigation ul li{
+    display: inline-block;/*li elements will be in blocks*/
+    background: black;/*navigation blocks black*/
+    width: 202px;/*the width*/
+    text-align: center;/*words will be in center*/
+    text-decoration:  none;/*dont want blue hyperlink properties*/
+    font-family: Lobster;/*the best font*/
+    font-size: 25px;/*how large i want the font*/
+    border-radius: 10px;/*to stop the pointed corners on the block and make it rounder*/
+}
+
+.navigation a {
+    color: white;/*the hyper linkss will be white*/
+    text-align: center/*words will be in center*/
+}
+
+.navigation a img { display:none; }/*This code was necessary to stop image from showing all the time*/
+.navigation a:hover img {/*calling image objects on hover*/
+    display: block;/*image is displayed as block*/
+    position: fixed;/*Fixed was necessary so block is not pushed down when hovered over*/'
+    top: 1px;/*How high to position object on hover*/
+}
+
+/*Logo Position*/
+.Logo {
+    display: block;/*logo will be displayed as a block*/
+    margin-left: auto;/*logo will be in center*/
+    margin-right: auto;/*logo will be in center*/
+}
+
+.Places p {
+    color: white;
+    text-align: center;/*words will be in center*/
+}
+
+.Intro h1 {
+    color: white;
+    text-align: center;/*words will be in center*/
+}
+
+.Intro h2 {
+    color: white;
+    text-align: center;/*words will be in center*/
+}
+
+.Intro p {
+    color: white;
+    text-align: center;/*words will be in center*/
+}
+
+.Places h2 {
+    color: white;
+    text-align: center;/*words will be in center*/
+}
+
+/*Body Font*/
+body {
+    margin: 0px;/*0 margin so no gaps*/
+    font-family: arial, helvetica;
+    line-height: 1.5;/*words on top of another gap*/
+    background-image: url('../img/back1.jpg')/*background image for cool background*/
+}
+
+.Intro {
+    margin: 1%;/*margin on all sides has a bit of gap*/
+    background: #262626;/*background of div container Intro is this color*/
+    text-align: center;/*words will be in center*/
+    clear:both;/*to stop float element being used on container*/
+    border-radius: 10px;/*for the curves*/
+}
+
+/*Main Article Layout*/
+main {
+    max-width: 900px;/*main article 900px max width*/
+    margin: auto;/*margin center*/
+    padding: 0px 20px;/*how much padding inside main article container*/
+    width: 100%;/*width covers full screen*/
+    text-align: center;/*words will be in center*/
+}
+
+.Pic {
+    width: 97%;/*dont want pic to take full width so leave a gap*/
+    height: 200px;/*all pics have similar height to stop it from increasing container height*/
+    margin: auto;/*center of the container*/
+}
+
+.Places {
+    margin: auto;/*want extra div for more control and easier placement in center*/
+    max-width: 100%;/*maximum width full*/
+}
+
+p.PlacesText {
+    width: 100%;/*maximum width*/
+    margin: 0px;
+    padding: 0px;/*no gaps*/
+}
+
+/*First 3 Articles laid out in columns on left*/
+.Places1 {
+    float:right;/*floats right*/
+    width:100%;
+    margin: 2%;/*margin used to provide a little gap between the boxes*/
+    padding: 1% 1% 1% 1%;
+    background: #262626;/*the color of the container*/
+    border-radius: 10px;/*for the curves on the boxes*/
+}
+
+/*Last 3 Articles laid out in right*/
+.Places2 {
+    float:right;/*all properties really similar*/
+    width:100%;
+    margin: 2%;
+    padding: 1% 0% 1% 1%;
+    background: #262626;
+    border-radius: 10px;/*for the curves on the boxes*/
+}
+
+
+footer {
+    clear: both;/*want to stop float element of div containers prior may not needed since bootstrap implementation*/
+    width: 100%;/*take the full screen*/
+    background-color: white;/*color of footer*/
+    text-align: center;/*words will be in center*/
+}
+
+
+.links a {
+    text-align: 50%; /*words will be given an equal gap*/
+}

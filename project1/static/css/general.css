@@ -1,0 +1,51 @@
+body {
+    /* background: #D0D3D6; */
+    background: #381841;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+    /* color: rgb(80, 88, 98); */
+    color: white;
+}
+
+.navbar-nav > li {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+}
+
+nav {
+    margin-bottom: 35px;;
+}
+
+.btn {
+    background: #58968B;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+
+.btn:hover {
+    border-color: #5D988E;
+    background-color: rgb(31, 131, 112);
+    cursor: pointer;
+    color: white;
+}

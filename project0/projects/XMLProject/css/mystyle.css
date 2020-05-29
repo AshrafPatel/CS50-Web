@@ -1,0 +1,86 @@
+table {
+    text-align: center;
+    border-style: ridge;
+    margin: auto;
+    font-size: 25px;
+    width: 100%;
+    border-collapse: collapse; 
+}
+th {
+    font-style: oblique;
+    color: #fedf8f;
+}
+body {
+    background-color: #000000;
+}
+td {
+    background-color: #f0f0f0;
+}
+form {
+    margin-top: 0;
+    text-align: center;
+    background-color: #000000;
+    padding: 15px;
+}
+.addForm {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+p {
+    margin: 0px;
+}
+.addForm > label {
+    font-size: 25px;
+    color: #fedf8f;
+    flex: 1;
+}
+.addForm > input[type="text"] {
+    height: 25px;
+    flex: 2;
+    font-size: 20px;
+}
+.addForm > input[type="button"] {
+    font-size: 25px;
+    flex: 3;
+}
+#imageCar {
+    width: 100%;
+    height: 700px;
+}
+.searchForm {
+    display:flex;
+    flex-direction: row;
+}
+.searchForm > input[type="text"] {
+    height: 45px;
+    flex: 10;
+    font-size: 45px;
+    border-radius: 15px;
+    font-family: 'Amaranth', sans-serif;
+    text-align: center;
+    /*                color: #c58e02;*/
+}
+.buttons {
+    background-color: black;
+    color: white;
+}
+.ed {
+    display: inline-flex;
+    flex-direction: row;
+    width: 50%;
+    font-size: 25px;
+}
+.editButton {
+    display: inline-block;
+    text-align: center;
+}
+.deleteButton {
+    display: inline-block;
+    text-align: center;
+}
+.carTable tr:hover td{
+    background-color: black;
+    color: white;
+}

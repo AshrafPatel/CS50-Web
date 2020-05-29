@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.nav-btn:hover {
+    color: white;
+    opacity: 1;
+}
+
+.nav-btn {
+    position: relative;
+    right: 10%;
+    background: #4A154B;
+    color: white;
+    transition: ease-in-out;
+    animation-duration: 2s;
+    opacity: 0.8;
+}
+
+.navbar-brand {
+    position: relative;
+    left: 10%;
+}
+
+.welcome {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 4;
+}
+
+h1 {
+    font-size: 12rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 900;
+    align-self: center;
+}
+
+.header > img {
+    height: 200px;
+    align-self: center;
+    margin-right: 55px;
+    background: none;
+}
+
+.header {
+    display: flex;
+    justify-self: right;
+    left: 300px;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-size: 6rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 900;
+    display: inline-block;
+    width: 400px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.try {
+    display: flex;
+    flex-direction: column;
+    background: #3F0E40;
+    width: 100%;
+    flex: 2;
+    justify-self: end;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-try {
+    background: white;
+    color: #3F0E40;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    animation-timing-function: ease-in-out;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+
+.btn-try:hover {
+    transform: scale(0.9);
+    border: none;
+}
+
+.btn-try:active {
+    color: white;
+    background: #3F0E40;
+}
+
+form {
+    z-index: 7;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    width: 400px;
+    height: 220px;
+    background: white;
+    display: none;
+    text-align: center;
+    background: #3F0E40;
+    box-shadow: 6px 6px 6px black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+}
+
+form > p {
+    color: white;
+}
+
+form > input {
+    min-width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-form {
+    background: #AAA;
+    color: #3F0E40;
+    text-transform: uppercase;
+    min-width: 100%;
+}
+
+.usernameexist {
+    font-size: 1rem;
+    color: red;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.closeform {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: #818181;
+    cursor: pointer;
+}
+
+.closeform:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media screen and (max-width: 830px) {
+    .header>img {
+        display: none;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+}

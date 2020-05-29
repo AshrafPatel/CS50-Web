@@ -1,0 +1,257 @@
+<head>
+    <meta charset="UTF-8" />
+    <title>AshrafPatel|Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+            background: linear-gradient(85deg, #4BBAD1, #083156);
+        }
+
+        header {
+            font-size: 25px;
+        }
+
+        #title {
+            padding-top: 100px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 5.5rem;
+            text-shadow: 4px 2px black;
+            text-transform: uppercase;
+            font-weight: 1000;
+        }
+
+        a:link {
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-project {
+            background-color: #1E90B0;
+            padding: 15px;
+            color: white;
+            font-size: 1.5rem;
+            height: 130px;
+            box-shadow: 0px 6px black;
+            position: relative;
+            align-self: flex-end;
+            border-radius: 10px;
+            margin: 5px 0;
+            transition: opacity ease-in-out 0.5s 100ms;
+            width: 100%;
+        }
+
+        .btn-project:hover {
+            top: 2px;
+            box-shadow: 0px 4px black;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .btn-project:active {
+            top: 6px;
+            box-shadow: none;
+        }
+
+        .project {
+            background: #0F4664;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 15px 30px 15px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 6px 3px black;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        img:hover {
+            opacity: 0.3;
+            filter: grayscale(75%);
+        }
+
+        img {
+            margin: 3px;
+            transition: opacity ease-in-out 0.5s 100ms;
+        }
+    </style>
+</head>
+<body>
+    <header id="AshrafPatel" class="">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Ashraf Patel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar1">
+                    <ul class="navbar-nav nav nav-fill w-100">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact/contact.html">Contact Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about/about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1 id="title">Web Projects</h1>
+    <div class="container">
+        <div class="projects row">
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://cs50-finance-ash.herokuapp.com/"><img src="./img/cs50finance.png" alt="" class="img img-fluid img-responsive"></a>
+                <a href="https://cs50-finance-ash.herokuapp.com//"><button class="btn-project">Stock Simulator (Flask & SQL)</button></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://codepen.io/4shr4f/full/NWWzwqj"><img src="./img/pomodoro.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="https://codepen.io/4shr4f/full/NWWzwqj"><button class="btn-project">Pomodoro Timer with
+                        React</button></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://face-recognition-ash.herokuapp.com/"><img src="./img/face-recognitionPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="https://face-recognition-ash.herokuapp.com/"><button class="btn-project">Face Recognition Program (React &
+                        PLSQL)</button></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="http://joke-app-ash.herokuapp.com/"><img src="./img/jokes.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="http://joke-app-ash.herokuapp.com/"><button class="btn-project">Joke Generator API(React with BrowserWrite)</button></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://pure-inlet-71397.herokuapp.com/" class=""><img src="./img/pokedexPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="https://pure-inlet-71397.herokuapp.com/"><button class="btn-project">Cool React Pokedex App with Redux (refresh)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://protected-bastion-17210.herokuapp.com/" class=""><img src="./img/eat-cakePNG.png"
+                    alt="" class="img img-fluid img-responsive"></a>
+                <a href="https://protected-bastion-17210.herokuapp.com/"><button class="btn-project">Todo List with Mongo DB and EJS (No
+                        Login)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://shielded-stream-47610.herokuapp.com/" class=""><img src="./img/blog-mongoPNG.png"
+                        alt="" class="img img-fluid img-responsive"></a>
+                <a href="https://shielded-stream-47610.herokuapp.com/"><button class="btn-project">My Blogsite using MongoDB and
+                        EJS</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://codepen.io/4shr4f/full/jOOZxOE" class=""><img src="./img/react calculatorPNG.png"
+                    alt="" class="img img-fluid img-responsive"></a>
+                <a href="https://codepen.io/4shr4f/full/jOOZxOE"><button class="btn-project">React Calculator</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://codepen.io/4shr4f/full/WNNdomY" class=""><img src="./img/markdown previewerPNG.png""
+                    alt="" class="img img-fluid img-responsive"></a>
+                <a href="https://codepen.io/4shr4f/full/WNNdomY"><button class="btn-project">React Markdown Previewer</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./simon-game/simon.html" class=""><img src="./img/simon-saysPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="./simon-game/simon.html"><button class="btn-project">Simon says Game</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./Dodge obstacles/Project2.html" class=""><img src="./img/dodge-zombiesPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./Dodge obstacles/Project2.html"><button class="btn-project">Dodge the zombies game</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./Javascript game/index.html" class=""><img src="./img/froggerPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./Javascript game/index.html"><button class="btn-project">Frogger JavaScript</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./firstSemsterSite/Home.html" class=""><img src="./img/escapism.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="./firstSemsterSite/Home.html"><button class="btn-project">First Website Created (Peru and Greece Work)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./background-generator/index.html" class=""><img src="./img/background-generatorPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./background-generator/index.html"><button class="btn-project">Background Generator(Vanilla JS)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://desolate-wave-24043.herokuapp.com/" class=""><img src="./img/newsletterPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="https://desolate-wave-24043.herokuapp.com/"><button class="btn-project">Sign Up to my Newsletter Demo</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="https://codepen.io/4shr4f/full/ZorZqp" class=""><img src="./img/quote generatorPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="https://codepen.io/4shr4f/full/ZorZqp"><button class="btn-project">Quote Generator jQuery</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./dancing-robot/index.html" class=""><img src="./img/dancing-robotPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./dancing-robot/index.html"><button class="btn-project">Dancing Robot (Advanced CSS/Animations)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./image-gallery/index.html" class=""><img src="./img/image-galleryPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./image-gallery/index.html"><button class="btn-project">Image Gallery (CSS)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./bootstrapProject/project2/Kit-Tin/index.html" class=""><img src="./img/kinderPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./bootstrapProject/project2/Kit-Tin/index.html"><button class="btn-project">Bootstrap startup website (Kinder)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./bootstrapProject/project1/index.html" class=""><img src="./img/project-dystopiaPNG.png"
+                        class="img img-fluid img-responsive"></a>
+                <a href="./bootstrapProject/project1/index.html"><button class="btn-project">Bootstrap startup website Unfinished (Project Dystopia)</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./Random Dice/dicee.html" class=""><img src="./img/dice-rollPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="./Random Dice/dicee.html"><button class="btn-project">Dice Roll</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./Drum Kit/drum.html" class=""><img src="./img/drum-kitPNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="./Drum Kit/drum.html"><button class="btn-project">Drum App</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./FrontEndMaster/index.html" class=""><img
+                        src="https://ashrafpatel.github.io/projects/img/frontendchallengePNG.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="./FrontEndMaster/index.html"><button class="btn-project">Front End Mentor Challenge</button class="btn-project"></a>
+            </div>
+            <div class="project col-sm-12 col-md-5 col-lg-3">
+                <a href="./XMLProject/carTable.html" class=""><img
+                        src="./img/showroom.png" alt=""
+                        class="img img-fluid img-responsive"></a>
+                <a href="./XMLProject/carTable.html"><button class="btn-project">XML to HTTP Project</button class="btn-project"></a>
+            </div>
+        </div>
+        </div>
+</body>

@@ -1,0 +1,44 @@
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url('./../image/hyperreality.jpg');
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    margin-right: 25px;
+}
+
+p {
+    font-family: 'Lobster', sans-serif;
+}
+
+h3 {
+    font-family: 'Lobster',sans-serif;
+    color: #959566;
+}
+
+.btn-primary {
+    border-radius: 40px;
+    text-transform: uppercase;
+}
+
+h1 {
+     color: #E0E0E0;
+     font-family: 'Anton', sans-serif;
+     letter-spacing: 1px;
+     margin-bottom: 30px;
+}
+
+.join-today {
+    margin-top: 40px;
+}
+
+.join-today:hover {
+    transition: all 1s ease;
+    margin-bottom: 12px;
+}

@@ -1,0 +1,89 @@
+
+header {
+    width: 100%;
+    background-color: black;
+}
+
+
+.navigation ul {
+    float: none;/*float to get in middle*/
+}
+
+.navigation ul li{
+    display: inline-block;/*li elements will be in blocks*/
+    background: #ecf1ec;/*navigation blocks white*/
+    width: 202px;/*the width of blocks*/
+    text-align: center;/*words will be in center*/
+    text-decoration:  none;/*dont want blue hyperlink properties*/
+    font-family: Lobster;/*implementing the best font*/
+    font-size: 25px;/*the font size*/
+    border-radius: 10px;/*To give the blocks curves*/
+}
+
+.navigation a {
+    color: black;/*the hyperlinks will be black*/
+    text-align: center/*words will be in center*/
+}
+
+.navigation a img { display:none; }/*This code was necessary to stop image from showing all the time*/
+.navigation a:hover img {/*calling image objects on hover*/
+    display: block;/*image is displayed as block*/
+    position: fixed;/*Fixed was necessary so block is not pushed down when hovered over*/'
+    top: 1px;/*How high to position object on hover*/
+}
+
+/*Logo Position*/
+.Logo {
+    display: block;/*logo will be displayed as a block*/
+    margin-left: auto;/*logo will be in center*/
+    margin-right: auto;/*logo will be in center*/
+}
+
+/*Body Font*/
+body {
+    margin: 0px;
+    font-family: arial, helvetica;
+    line-height: 1.5;;/*words on top of another gap*/
+    background-image: url(../img/back1.jpg);/*Background image*/
+}
+
+img.resizing {
+  width: 60%;/*images for carousel to keep it fitting*/
+  height: 400px;/*same reason but on height*/
+}
+
+
+footer {
+    clear: both;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+
+.carousel-inner {
+  clear: both;/*REmoving any float properties from nav bar*/
+}
+
+.carousel-inner h5 {/*For caption header in Carousel*/
+    font-family: Lobster;
+    font-size: 40px;
+}
+
+
+.links a {
+    text-align: 50%;/*For an equal gap on either side*/
+}
+
+h1 {/*For the Welcome to Escapism*/
+  text-align: center;
+  font-family: "Dancing Script";/*Using a stylish font which was imported*/
+  font-size: 70px;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  font-family: OpenSans;
+  font-size: 20px;
+}

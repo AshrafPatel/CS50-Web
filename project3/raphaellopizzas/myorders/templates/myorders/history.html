@@ -1,0 +1,25 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Raphaello's Pizza|Order History{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'cart/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div id="cart-background">
+    <h2>Order History</h2>
+    <hr />
+    {% if orders %}
+        {% for x in orders %}
+            <div class="each-order">
+                <h5>Date Ordered: {{x.date}}</h5>
+                <p>{{x.summary}}</p>
+                <a class="link" href="{% url 'view_order' x.id %}">Read More...</a>
+            </div>
+        {% endfor %}
+    {% else %}
+            <h4 style="text-align: center;">You have no orders</h4>
+            <a href="{% url 'create_order' %}"><button id='btn-submit'>Order Today</button></a>
+    {% endif %}
+</div>
+{% endblock %}

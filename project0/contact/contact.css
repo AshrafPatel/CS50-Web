@@ -1,0 +1,107 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#494949, #191919);
+    max-height: 700px;
+}
+
+header {
+    font-size: 25px;
+}
+
+.ContactMe {
+    margin-top: 0px;
+}
+
+fieldset {
+    background: linear-gradient(#E2E2E2, #AEAEAE);
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 30px;
+    box-shadow: 6px 6px 6px black;
+    border-radius: 10px;
+}
+
+fieldset p,
+label {
+    color: #262626;
+}
+
+.formSmallBoxes li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 500px;
+    min-width: 400px;
+}
+
+.formSmallBoxes li>input {
+    flex: 5;
+    padding: 5px;
+}
+
+.formSmallBoxes li>label {
+    flex: 2;
+    padding: 5px;
+}
+
+.fieldset p {
+    display: block;
+    margin: auto;
+}
+
+fieldset textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+/*Font Info*/
+#getInTouch {
+    font-size: 75px;
+    text-align: center;
+    word-wrap: normal;
+    margin-top: 120px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 6px 6px 6px black;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: block;
+    position: relative;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 300px;
+    color: #707881;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 80px;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 6px #414452;
+
+}
+
+.btn:hover {
+    box-shadow: 0 4px #414452;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 6px;
+}

@@ -1,0 +1,38 @@
+.card {
+    width: 400px;
+    background: #19A389;
+    box-shadow: 6px 0 6px black;
+}
+
+p {
+    margin: 0;
+}
+
+ion-icon {
+    font-size: larger;
+}
+
+h3, h4, h5, h6 {
+    color: #2566AE;
+}
+
+body {
+    background: #381841;
+}
+
+h1, h2 {
+    color: white;
+}
+
+h1 {
+    text-shadow: 5px 5px 5px black;
+    font-size: 5rem;
+}
+
+a {
+    color: #FE9166;
+}
+
+.add-border {
+    width: 130px;
+}

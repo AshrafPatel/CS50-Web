@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}Goodbooks Result{% endblock %}
+{% block style %}<link rel="stylesheet" type="text/css" href="/static/css/books.css">{% endblock %}
+{% block body %}
+<h1>Goodbooks</h1>
+<div class="d-flex flex-wrap justify-content-center">
+{% for book in bookresults %}
+    <div class="card m-4">
+        <div class="card-body rounded">
+            <h2 class="card-title">{{book.title}}</h2>
+            <h4 class="card-subtitle mb-2 text-muted">{{book.author}}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">{{book.year}}</h6>
+            <br>
+            <div class="d-flex justify-content-between">
+                <div class="add-border">
+                    <h4 class="card-text">ISBN</h4>
+                    <p class="card-text">{{book.isbn}}</p>
+                </div>
+                <div class="add-border">
+                    <h4 class="card-text">Review Count</h4>
+                    <p class="card-text">{{book.work_ratings_count}}</p>
+                </div>
+            </div>
+            <br>
+            {% set number = book.get("average_rating") | int %}
+            {% for i in range(1, 6) %}
+                {% if i <= number %}
+                    <ion-icon name="star"></ion-icon>
+                {% else %}
+                    <ion-icon name="star-outline"></ion-icon>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <a href="/books/{{book.id}}" class="card-link">View more...</a>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

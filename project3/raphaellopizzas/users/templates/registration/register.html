@@ -1,0 +1,20 @@
+{% extends "orders/base.html" %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'registration/style.css' %}">
+{% endblock %}
+
+{% block body %}
+
+{% if form.errors %}
+    <p>There are errors in the form!</p>
+{% endif %}
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    <img src="{% static 'img/pizza.png' %}" class="title-img" />
+    <h1>Register</h1>
+    {{ form }}
+    <input type="submit" value="register" class="btn-user" />
+</form>
+{% endblock %}

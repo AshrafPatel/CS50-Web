@@ -1,0 +1,184 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas" width="1000" height="500"></canvas>
+        <script>
+           window.addEventListener('load', function() {
+            //CANVAS variables
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            var CANVAS_WIDTH = canvas.width;
+            var CANVAS_HEIGHT = canvas.height;
+            context.font = "10px Arial";
+            context.fillStyle = "red";
+
+            //game variables
+            var score= 0;
+            moreSpeed = 1000;
+            moreEnemy = 500;
+            enemyArmy = 5;
+            enemySpeed = 1
+            var enemyList = [];
+
+            var player = {
+                positionX: 0,
+                positionY: 120,
+                w: 70,
+                h: 70
+            }
+
+            for (var i = 0; i < enemyArmy; i++)
+            {
+                var enemy =
+                {
+                    positionX: Math.floor((Math.random()*CANVAS_WIDTH)+800),
+                    positionY: Math.floor((Math.random()*CANVAS_HEIGHT)+3),
+                    speedX: enemySpeed,
+                    w: 70,
+                    h: 70
+                }
+                enemyList.push(enemy);
+            }
+
+        //Create sprite object and load function    
+        var sprites = {};
+        function load() {
+           sprites.background = new Image();
+           sprites.background.src = "./Additional stuff/Images/back2.jpg";
+
+           sprites.player = new Image();
+           sprites.player.src = "./Additional stuff/Images/player.png";
+
+           sprites.enemy = new Image();
+           sprites.enemy.src = "./Additional stuff/Images/zombie9581355.png";
+       }
+
+        //Add event listener
+        window.addEventListener("keydown", keydownHandler, false);        //Function is called keydownHandler
+
+        function update() {
+           // context.drawImage(
+           //      megaman, 480, 0,         //where to clip image
+           //               96, 96,         //size clip of image
+           //               0, 0,           //placement on canvas
+           //               96, 96          //how much to stretch image by
+           //  )
+           
+           score++;
+           increaseDifficulty();
+           enemySpawn();
+           playerOffScreen();
+       }
+
+       function draw() {
+
+            context.clearRect(0, 0,                        //where to start erasing on canvas coordinates
+                            96, 96);                     //where to end erasing coordinates
+            context.drawImage(sprites.background, 0, 0, 1000, 1000, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            context.drawImage(sprites.player, 0, 0, 350, 368, player.positionX, player.positionY, player.w, player.h);
+            enemyList.forEach(function(element, index) {
+            	context.drawImage(sprites.enemy, 0, 0, 649, 1063, element.positionX, element.positionY, element.w, element.h);
+            });
+            context.fillText(score, 10, 10);
+
+        }        //function thelooper is created will be called which has the method drawimage
+
+        window.setInterval(function()
+        {
+            draw();
+            update();
+        }, 1
+        );
+
+
+    function keydownHandler(event) {
+
+      if (event.keyCode == 82) {
+        imageClip = 0;
+    }
+    else if (event.keyCode == 68 || event.keyCode == 39) {
+        player.positionX += 20;
+    }
+
+    else if (event.keyCode == 37 || event.keyCode == 65) {
+        player.positionX -= 20;
+    }
+
+    else if (event.keyCode == 87 || event.keyCode == 38) {
+        player.positionY -= 20;
+    }
+
+    else if (event.keyCode == 83 || event.keyCode == 40) {
+        player.positionY += 20;
+    }
+}
+
+function enemySpawn() {
+    enemyList.forEach(function(element, index) {
+        element.positionX -= element.speedX;
+        if (element.positionX < 0) {
+            element.positionX = Math.floor((Math.random()*CANVAS_WIDTH)+800);
+            element.positionY = Math.floor((Math.random()*CANVAS_HEIGHT)+3);
+        }
+        if (checkCollision(player, element)==true) {
+            window.location = "";
+            return;
+        }
+    })
+}
+
+function playerOffScreen() {
+    if (player.positionX >= (CANVAS_WIDTH/3)*2) {
+        player.positionX = (CANVAS_WIDTH/3)*2;
+    }
+    if (player.positionX <= 10) {
+        player.positionX = 10;
+    }
+    if (player.positionY <= 5) {
+        player.positionY = 5;
+    }
+    if (player.positionY >= CANVAS_HEIGHT-40) {
+        player.positionY = CANVAS_HEIGHT-40;
+    }
+}
+
+function increaseDifficulty() {
+    if (score >= moreSpeed) {
+        moreSpeed+= 1000;
+        enemySpeed++;
+    }
+    if (score >= moreEnemy) {
+        moreEnemy += 500;
+        element = {
+            positionX: 0,
+            positionY: 0,
+            speedX: enemySpeed
+        };
+        enemyArmy++;
+        enemyList.push(element);
+    }
+}
+
+
+function checkYposition(rect1, rect2) {
+    var closeOnHeight = Math.abs(rect1.positionY - rect2.positionY) <= Math.max(rect1.positionY, rect2.positionY);
+    return closeOnHeight;
+}
+
+
+function checkCollision(rect1, rect2) {
+    var closeOnWidth = Math.abs(rect1.positionX - rect2.positionX) <= Math.max(rect1.w, rect2.w);
+    var closeOnHeight = Math.abs(rect1.positionY - rect2.positionY) <= Math.max(rect1.h, rect2.h);
+    return closeOnWidth && closeOnHeight;
+}
+
+
+
+load();
+});
+</script>
+</body>
+</html>

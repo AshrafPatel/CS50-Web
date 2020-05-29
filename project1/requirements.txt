@@ -1,0 +1,9 @@
+Flask
+Flask-Session
+psycopg2-binary
+SQLAlchemy
+Werkzeug==0.15
+requests
+passlib
+gunicorn
+gevent
