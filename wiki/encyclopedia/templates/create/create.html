@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+    <h1>Create Page</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input  style="max-width: 700px;" value="{{title}}"" type="text" id="title" name="title" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="markdown">Markdown</label>
+            <textarea style="max-width: 700px; height: 200px;" type="text" id="markdown" name="markdown" class="form-control">{{markdown}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+{% endblock %}

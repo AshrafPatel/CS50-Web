@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Search - {{search_term}}
+{% endblock %}
+{% block body %}
+    <h2 style="text-align: center;"><i>{{search_term}}</i> Search Results:</h2>
+    {% for s in search_data%}
+        <a href="/wiki/{{s}}">{{s}}</a>
+    {% endfor%}
+{% endblock %}
